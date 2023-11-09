@@ -1,5 +1,5 @@
 [project]
-name = "django boilerplate"
+name = "django-starterproject"
 version = "2023.1.0"
 description = "Hope this boilerplate helps you!"
 keywords = ["egg", "bacon", "sausage", "tomatoes", "Lobster Thermidor"]
