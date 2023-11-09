@@ -7,9 +7,6 @@
 # IntelliJ project-specific settings files
 .idea
 
-# pip requirement file
-/requirements.txt
-
 # static and media files
 static
 media
