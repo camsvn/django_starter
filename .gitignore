@@ -1,0 +1,22 @@
+# Python Library
+.venv
+
+# Compiled python code files
+*.pyc
+
+# IntelliJ project-specific settings files
+.idea
+
+# pip requirement file
+/requirements.txt
+
+# static and media files
+static
+media
+
+# Django local settings files
+local_settings.py
+
+# Environment Variables
+.env
+.env.*

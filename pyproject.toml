@@ -1,0 +1,38 @@
+[project]
+name = "django boilerplate"
+version = "2023.1.0"
+description = "Hope this boilerplate helps you!"
+keywords = ["egg", "bacon", "sausage", "tomatoes", "Lobster Thermidor"]
+authors = [
+  {email = "amalsalvin97@gmail.com"},
+  {name = "Amal Salvin Joseph"}
+]
+
+[tool.black]
+line-length = 88
+include = "/.pyi?$"
+exclude = "/*/*/migrations/*"
+
+[tool.isort]
+profile = "black"
+skip_glob = ["/.*/.*/migrations/.*"]
+
+[tool.commitizen]
+name = "cz_customize"
+
+[tool.commitizen.customize]
+message_template = "{{change_type}}:{% if show_message %} {{message}}{% endif %}"
+example = "feature: this feature enable customize through config file"
+schema = "<type>: <body>"
+schema_pattern = "(?s)(build|ci|docs|feat|fix|refact|test|chore|revert|bump|migration|datamigration)(\\(\\S+\\))?!?:( [^\n\r]+)((\n\n.*)|(\\s*))?$"
+#schema_pattern = "(feat|fix|ci|chore|migration|datamigration|test|refact|merge):(\\s.*)"
+bump_pattern = "^(break|new|fix|hotfix)"
+bump_map = {"break" = "MAJOR", "new" = "MINOR", "fix" = "PATCH", "hotfix" = "PATCH"}
+change_type_order = ["BREAKING CHANGE", "feat", "fix", "refactor", "perf", "ci", "chore", "migration", "datamigration", "merge"]
+info_path = "cz_customize_info.txt"
+info = """
+This is customized info
+"""
+commit_parser = "^(?P<change_type>feature|bug fix):\\s(?P<message>.*)?"
+changelog_pattern = "^(feature|bug fix)?(!)?"
+change_type_map = {"feature" = "Feat", "bug fix" = "Fix"}
