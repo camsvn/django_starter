@@ -22,7 +22,7 @@ repos:
       - id: end-of-file-fixer # ensures that a file is either empty, or ends with one newline.
       - id: debug-statements
       - id: check-case-conflict # checks for files that would conflict in case-insensitive filesystems.
-      # - id: pretty-format-json # sets a standard for formatting json files.
+      - id: pretty-format-json # sets a standard for formatting json files.
   - repo: https://github.com/pycqa/isort
     rev: 5.12.0
     hooks:
