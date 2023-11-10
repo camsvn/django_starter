@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # 3P - Production, Preparation, Process
     "corsheaders",
     "rest_framework",
+    "django_filters",
     # APPS
     "accounts",
 ]
@@ -142,6 +143,10 @@ REST_FRAMEWORK = {
     ],
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.IsAuthenticated",
+    ],
+    "DEFAULT_FILTER_BACKENDS": [
+        "django_filters.rest_framework.DjangoFilterBackend",
+        "rest_framework.filters.OrderingFilter",
     ],
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
     "PAGE_SIZE": 20,
