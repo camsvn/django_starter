@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # 3P - Production, Preparation, Process
+    "django_extensions",
     "corsheaders",
     "rest_framework",
     "django_filters",
